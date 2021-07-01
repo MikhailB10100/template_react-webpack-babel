@@ -14,6 +14,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "browserslist": "> 0.25%, not dead",
   "bugs": {
     "url": "https://github.com/MikhailB10100/template_react-webpack-babel/issues"
   },
