@@ -18,8 +18,20 @@
   },
   "homepage": "https://github.com/MikhailB10100/template_react-webpack-babel#readme",
   "devDependencies": {
-    "dev-server": "^0.2.0",
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^5.2.6",
+    "html-webpack-plugin": "^5.3.2",
+    "mini-css-extract-plugin": "^2.0.0",
     "webpack": "^5.41.1",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }
