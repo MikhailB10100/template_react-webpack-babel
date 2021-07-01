@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/MikhailB10100/template_react-webpack-babel/issues"
   },
-  "homepage": "https://github.com/MikhailB10100/template_react-webpack-babel#readme"
+  "homepage": "https://github.com/MikhailB10100/template_react-webpack-babel#readme",
+  "devDependencies": {
+    "dev-server": "^0.2.0",
+    "webpack": "^5.41.1",
+    "webpack-cli": "^4.7.2"
+  }
 }
