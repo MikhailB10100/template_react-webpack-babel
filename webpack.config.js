@@ -19,7 +19,6 @@ const jsLoaders = () => {
       }
     }
   ]
-
   return loaders
 }
 
@@ -36,7 +35,8 @@ module.exports = {
     extensions: ['.js'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
-      '@components': path.resolve(__dirname, 'src/components')
+      '@components': path.resolve(__dirname, 'src/components'),
+      '@styles': path.resolve(__dirname, 'src/scss'),
     }
   },
   devtool: isDev ? 'source-map' : false,
@@ -80,7 +80,15 @@ module.exports = {
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: jsLoaders()
-      }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: 'asset/resource',
+      },
     ],
   },
 };
