@@ -14,7 +14,7 @@ const jsLoaders = () => {
     {
       loader: 'babel-loader',
       options: {
-        presets: ['@babel/preset-env', '@babel/preset-react'],
+        presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
         plugins: ['@babel/plugin-proposal-class-properties']
       }
     }
@@ -25,14 +25,14 @@ const jsLoaders = () => {
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
-  entry: ['@babel/polyfill', './index.js'],
+  entry: ['@babel/polyfill', './index.tsx'],
   output: {
     filename: filename('js'),
     path: path.resolve(__dirname, 'dist'),
   },
   target: isDev ? 'web' : 'browserslist',
   resolve: {
-    extensions: ['.js'],
+    extensions: ['.tsx', '.ts', '.js'],
     alias: {
       '@': path.resolve(__dirname, 'src'),
       '@components': path.resolve(__dirname, 'src/components'),
@@ -77,7 +77,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.m?js$/,
+        test: /\.(m?js|tsx?)$/,
         exclude: /node_modules/,
         use: jsLoaders()
       },
