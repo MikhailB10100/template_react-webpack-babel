@@ -43,7 +43,9 @@ module.exports = {
   devServer: {
     port: 3000,
     hot: true,
-    inline: true
+    inline: true,
+    historyApiFallback: true,
+    contentBase: './',
   },
   plugins: [
     new CleanWebpackPlugin(),
